@@ -1,0 +1,15 @@
+<p>Here you can view all your Purchases</p>
+<div class="main">
+  <div class="sub" *ngFor="let couponPurchase of couponPurchases">
+    <img src="../../../../assets/Img/units/{{couponPurchase.coupon.couponImage}}">
+    <span id="id">ID: {{couponPurchase.coupon.couponId}}</span>
+    <span id="title">>>{{couponPurchase.coupon.couponTitle}}<< by {{couponPurchase.coupon.companyName}}</span>
+    <span id="type">Type: <br> {{couponPurchase.coupon.couponType}}</span>
+    <span id="start">Start Date:<br> {{couponPurchase.coupon.couponStartDate}}</span>
+    <span id="end">End Date:<br> {{couponPurchase.coupon.couponEndDate}}</span>
+    <span id="amount"><span style="font-size: 1.25vw">Purchased:</span><br>>>{{couponPurchase.amount}}<<</span> 
+    <span id="message">{{couponPurchase.coupon.couponMessage}}</span>
+    <span id="price">{{couponPurchase.coupon.couponPrice}}$</span>
+    <button *ngIf="this.cookie.get('type') == 'customer'" class="submitButton" (click)="buyCoupon(couponPurchase.coupon.couponId)">Buy More</button>
+  </div>
+</div>

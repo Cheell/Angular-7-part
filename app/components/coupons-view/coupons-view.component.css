@@ -1,0 +1,229 @@
+section{
+    display: grid;
+    grid-template-columns: 2vw 20vw 40vw auto;
+}
+
+input{
+    font-size: 1.5vw;
+    width: 18vw;
+    height: 2.5vw;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 1.5vw  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    font-size: 1.5vw  }
+  :-ms-input-placeholder { /* IE 10+ */
+    font-size: 1.5vw  }
+  :-moz-placeholder { /* Firefox 18- */
+    font-size: 1.5vw  }
+  
+
+
+
+
+
+div.menu{
+    justify-content: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    font-size: 1.95vw;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;
+}
+
+select{
+    margin-top: 0.2vw;
+    display: block;
+    font-size: 1.8vw;
+    font-weight: 700;
+    color:whitesmoke;
+    text-shadow: 0 -1px 4px black, 0 +1px 4px black, 0 -1px 4px black, 0 -1px 4px black;    
+    width: 18vw;
+    height: 2.5vw;
+    background-image: url('../../../assets/Img/input.png'), linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+}
+
+option{
+    background: rgb(134, 90, 61);
+    border-color: rgb(98,57,27);
+}
+
+
+
+
+
+
+label{
+    font-size: 1.5vw;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+
+
+div.sub {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 8vw 12vw 10vw 10vw 0.1vw;
+    grid-template-rows: 3vw 5vw 5vw auto;
+}
+
+
+#id{
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1vw;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-size: 1vw;
+}
+
+
+#title{
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-size: 2vw;
+    border-bottom: 0.3vw dotted rgba(0, 0, 0, 0.340);
+}
+
+img{
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;    
+    max-height: 100%;
+    object-fit: contain;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+#type{
+    margin-top: 0.1vw;
+    border-left: 0.2vw dotted rgba(0, 0, 0, 0.340);
+    border-right: 0.2vw dotted rgba(0, 0, 0, 0.340);
+    text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    font-size: 1.5vw;
+    white-space: nowrap;
+    border-bottom: 0.3vw dotted rgba(0, 0, 0, 0.340);
+}
+
+#amount{
+    border-left: 0.2vw dotted rgba(0, 0, 0, 0.340);
+    border-right: 0.2vw dotted rgba(0, 0, 0, 0.340);
+    text-align: center;
+    font-size: 1.5vw;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+
+#start{
+    margin-top: 0.1vw;
+    border-right: 0.2vw dotted rgba(0, 0, 0, 0.340);
+    text-align: center;
+    white-space: nowrap;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    font-size: 1.5vw;
+    border-bottom: 0.3vw dotted rgba(0, 0, 0, 0.340);
+}
+#end{
+    border-right: 0.2vw dotted rgba(0, 0, 0, 0.340);
+    text-align: center;
+    white-space: nowrap;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;        
+    font-size: 1.5vw;
+}
+
+#price{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    font-size: 4vw;
+}
+
+#menuButt{
+    margin: unset;
+    margin-top: 0.4vw;
+    height: unset;
+    height: 4.5vw;
+    width: unset;
+    width: 18vw;
+    grid: initial;    
+    justify-content: center;
+}
+
+
+
+
+button{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin: auto;
+    width: 9.5vw;
+    height: 2.4vw;
+    font-size: 1.5vw;
+}
+
+
+
+#message{
+    border-top: 0.2vw dotted rgba(0, 0, 0, 0.340);
+    border-bottom: 0.5vw solid rgba(0, 88, 104, 0.829);
+    text-align: center;
+    font-size: 1.2vw;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+div.main{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    height: 33vw;
+    overflow-x: hidden;
+    width: 45vw;
+    margin-right: auto;
+    margin-left: auto;
+    border: 14px solid transparent;
+    border-style:solid;
+    border-image: url('../../../assets/Img/border2.jpg') 25% repeat;
+}
+
+div.main::-webkit-scrollbar {
+    width: 1vw;
+    background-color:  rgba(56, 28, 5, 0.877);
+}
+  
+div.main::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 149, 68, 0.877);
+  outline: 10px solid rgb(0, 65, 131);
+}
+

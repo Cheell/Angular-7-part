@@ -1,0 +1,14 @@
+<br>
+<p>Here you can change not only your name, but maybe even destiny!!!</p>
+<br>
+<div>
+  <span>Your current name: </span><span class="user">{{customer.customerName}}</span>
+  <input #name required type="text" placeholder="New name...">
+  <button (click)="updateName(name.value)" class="menuButton">Change name</button>
+</div>
+<br>
+<div>
+  <span>Your current password: </span><span class="user">{{customer.customerPassword}}</span>
+  <input #password required type="text" placeholder="New password...">
+  <button (click)="updatePassword(password.value)" class="menuButton">Change password</button>
+</div>

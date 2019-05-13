@@ -1,0 +1,56 @@
+<br>
+<p>Update your company coupon  or DELETE(i know u dont wona do it)</p>     
+<button (click)="deleteCoupon(this.coupon.couponId)" class="menuButton" id="del">DELETE:(</button>
+
+<br>
+
+<div id="mainn">
+  <div id="subb">
+    <span>Current Coupon Type: </span><span class="user">{{coupon.couponType}}</span>
+    <select [(ngModel)]="type">
+        <option *ngFor="let type of types" [ngValue]="type">{{type}}</option>
+    </select>
+    <button (click)="updateCouponType(type)" class="menuButton" id="menuButt">Change Type</button>
+  </div>
+  <div id="subb">
+    <span>Current Coupon Title: </span><span class="user">{{coupon.couponTitle}}</span>
+    <input #couponTitle required type="text" placeholder="Coupon Title...">
+    <button (click)="updateCouponTitle(couponTitle.value)" class="menuButton" id="menuButt">Change Title</button>
+  </div>
+  <div id="subb">
+    <span>Current Coupon Start Date: </span><span class="user">{{coupon.couponStartDate}}</span>
+    <input #couponStartDate required type="text" placeholder="Coupon Start Date..."
+    (change)="checkDates()" 
+    type="text" onfocus="(this.type='date')" onblur="(this.type='text')">
+    <button [disabled] = "!(couponEndDate.dirty && validDates == true && couponStartDate.dirty)"
+    (click)="updateCouponStartDate(couponStartDate.value)" class="menuButton" id="menuButt">Change Start Date</button>
+  </div>
+  <div id="subb">
+    <span>Current Coupon End Date: </span><span class="user">{{coupon.couponEndDate}}</span>
+    <input #couponEndDate required type="text" placeholder="Coupon End Date..."
+    (change)="checkDates()" 
+    type="text" onfocus="(this.type='date')" onblur="(this.type='text')">
+    <button [disabled] = "!(couponEndDate.dirty && validDates == true && couponStartDate.dirty)"
+    (click)="updateCouponEndDate(couponEndDate.value)" class="menuButton" id="menuButt">Change End Date</button>
+  </div>
+  <div id="subb">
+    <span>Current Coupon Amount: </span><span class="user">{{coupon.couponAmmount}}</span>
+    <input #couponAmmount required type="number" placeholder="Coupon Amount..." min="0">
+    <button (click)="updateCouponAmount(couponAmmount.value)" class="menuButton" id="menuButt">Change Amount</button>
+  </div>
+  <div id="subb">
+    <span>Current Coupon Price: </span><span class="user">{{coupon.couponPrice}}</span>
+    <input #couponPrice required type="number" placeholder="Coupon Price..." min="0">
+    <button (click)="updateCouponPrice(couponPrice.value)" class="menuButton" id="menuButt">Change Price</button>
+  </div>
+  <div id="subb">
+    <span>Current Coupon Image: </span><span class="user">{{coupon.couponImage}}</span>
+    <input #couponImage required type="text" placeholder="Coupon Image...">
+    <button (click)="updateCouponImage(couponImage.value)" class="menuButton" id="menuButt">Change Image</button>
+  </div>
+  <div id="subb">
+    <span>Current Coupon Message: </span><span class="user">{{coupon.couponMessage}}</span>
+    <input #couponMessage required type="text" placeholder="Coupon Message...">
+    <button (click)="updateCouponMessage(couponMessage.value)" class="menuButton" id="menuButt">Change Message</button>
+  </div>
+<div>

@@ -1,0 +1,87 @@
+form {
+    margin-left: 0.1vw;
+    margin-right: 0.1vw;
+    text-align: center;
+    display: grid;
+    overflow: auto;
+    grid-template-columns: 26vw 22.3vw 22.3vw auto;
+    grid-template-rows: auto;
+}
+
+p {
+    color:rgb(93, 158, 158);
+    text-shadow: 0 -1px 4px black, 0 +1px 4px black, 0 -1px 4px black, 0 -1px 4px black;    
+    margin-left: 22.5vw;
+    text-align: left;
+    font-size: 2vw;
+    font-weight: 900;
+}
+
+label{
+    margin-top:  0.2vw;
+    margin-left:  5vw;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    text-align: center;
+    color: rgb(172, 126, 126);
+    text-shadow: 0 -1px 4px black, 0 +1px 4px black, 0 -1px 4px black, 0 -1px 4px black;    
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+label.not{
+    color:rgb(61, 117, 61);
+}
+
+form span{
+    margin-top:  0.2vw;
+    margin-left:  5vw;
+
+    grid-column-start: 3;
+    grid-column-end: 4;
+    text-align: left;
+    color: red;
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+form button {
+    text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    height: 5vw;
+    width: 22.3vw;
+}
+
+form input, input:focus{
+    margin-top:  0.2vw;
+    margin-bottom: 0.1vw;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width: 22.3vw;
+    height: 2.3vw;
+}
+
+
+
+
+form select{
+    margin-top: 0.2vw;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: block;
+    font-size: 2vw;
+    font-weight: 700;
+    color:whitesmoke;
+    text-shadow: 0 -1px 4px black, 0 +1px 4px black, 0 -1px 4px black, 0 -1px 4px black;    
+    width: 22.3vw;
+    height: 2.5vw;
+    background-image: url('../../../../assets/Img/input.png'),
+      linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+}
+
+option{
+    background: url('../../../../assets/Img/input.png') rgb(134, 90, 61);
+    border-color: rgb(98,57,27);
+}

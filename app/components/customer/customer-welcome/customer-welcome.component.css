@@ -1,0 +1,49 @@
+.card {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    text-align-last: auto;
+  }
+  
+  #words {
+    font-size: 2.1vw;
+    font-weight: 10;
+    color: rgba(255,255,255,.3);
+    text-shadow: 0 0 15px rgba(255,255,255,.5);
+  }
+  #sub {
+    color: rgb(71, 36, 3);
+    font-size: 1vw;
+    font-weight: 10;
+    color: #FFFFFF;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+  }
+
+  #user {
+    color: #FFFFFF;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+    color: #FFFFFF;
+    font-size: 2.5vw;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+
+  span{
+    margin: 0.1vw;
+    padding: 0.2vw 0.2vw;
+    font-size: x-small;
+  }
+
+
+  .imgCenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 12vw;
+  }
+

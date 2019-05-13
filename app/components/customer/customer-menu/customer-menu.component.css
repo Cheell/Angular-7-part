@@ -1,0 +1,10 @@
+.menuDelButton{
+    background: url("../../../../assets/Img/buttonDel.png") no-repeat padding-box scroll 0 0 transparent;
+    background-size: cover;
+    color: #161000;
+    font-size: 1.1vw;
+    font-weight: 800;
+    cursor: auto;
+    height: 3.2vw;
+    width: 14vw;
+}

@@ -1,0 +1,16 @@
+<div style="margin-top: 2vw">Please fill the fields below and press "Register" to register as a verified customer!</div>
+
+<img src="../../../../assets/Img/tower.png" class="tower">
+
+<form #myForm="ngForm" (ngSubmit)="send()" class="loginSize" style="margin-top: 8vw; margin-left: 20vw">
+ 
+    <input #name="ngModel" required type="text" name="customerName" [(ngModel)]="customer.customerName" placeholder="Name...">
+    <span *ngIf="name.invalid && name.dirty">Missing Name</span>
+    <br>
+  
+    <input #password="ngModel" required type="text" name="customerPassword" [(ngModel)]="customer.customerPassword" placeholder="Password...">
+    <span *ngIf="password.invalid && password.dirty">Missing Password</span>
+    <br>
+  
+    <button [disabled]="myForm.form.invalid" class='submitButton'>Register</button>
+</form>

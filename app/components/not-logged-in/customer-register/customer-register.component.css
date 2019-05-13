@@ -1,0 +1,16 @@
+.tower{
+    display: block;
+    height: 30vw;
+    margin-left: 0;
+    margin-right: 0;
+    float: right;
+}
+
+
+span {
+    margin: 10px;
+    text-align: left;
+    color: red;
+    font-weight: bold;
+    position: absolute;
+}

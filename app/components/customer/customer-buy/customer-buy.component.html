@@ -1,0 +1,20 @@
+<p>
+  Buy this wonderful coupon!
+</p>
+  <div class="sub">
+    <img src="../../../../assets/Img/units/{{coupon.couponImage}}">
+    <span id="id">ID: {{coupon.couponId}}</span>
+    <span id="title">>>{{coupon.couponTitle}}<< by {{coupon.companyName}}</span>
+    <span id="type">Type: <br> {{coupon.couponType}}</span>
+    <span id="start">Start Date:<br> {{coupon.couponStartDate}}</span>
+    <span id="end">End Date:<br> {{coupon.couponEndDate}}</span>
+    <span id="amount">Max-Amount:<br> {{coupon.couponAmmount}}</span>
+    <span id="message">{{coupon.couponMessage}}</span>
+    <span id="price">{{coupon.couponPrice}}$</span>
+  </div>
+  <div class="sub2">
+    <label>Amount of coupons: </label>
+    <input [(ngModel)] = amount required type="number" placeholder="Coupon Amount..." min="0" max="100">
+    <button (click)="buyCoupon(amount)" class="menuButton" id="menuButt">Buy Coupon</button>
+    <span style="margin-right: 2vw; width: 20vw">Cost: {{costShow()}}</span>
+  </div>

@@ -1,0 +1,16 @@
+<br>
+<button *ngIf = "this.cookie.get('type') === 'customer'" (click) = "nav('CustomerWelcome','CustomerMenu')" class="menuButton">Customer</button>
+<button *ngIf = "this.cookie.get('type') === 'company'" (click) = "nav('CompanyWelcome','CompanyMenu')" class="menuButton">Company</button>
+<button *ngIf = "this.cookie.check('type') === false" (click) = "nav('Home')" class="menuButton">Home</button>
+
+<div  class="separator"></div>
+
+<button (click) = "nav('CustomerLogin')" class="menuButton">Customers Login</button>
+<div  class="separatorSmall"></div>
+<button (click) = "nav('CustomerRegister')" class="menuButton">New Customer</button>
+<div  class="separator"></div>
+<button (click) = "nav('CompanyLogin')" class="menuButton">Companies Login</button>
+<div  class="separatorSmall"></div>
+<button (click) = "nav('CompanyRegister')" class="menuButton">New Company</button>
+<div  class="separator"></div>
+<button (click) = "nav('CouponsView')" class="menuButton">View Coupons</button>

@@ -1,0 +1,44 @@
+<br>
+<p>Create your company new coupon!</p>
+<br>
+
+<form [formGroup]="myForm" (ngSubmit)="send()" class="loginSize">
+
+  <label>Required field:</label>
+  <select formControlName="couponType" [ngClass]="{ 'ng-invalid': f.couponType.value == 'Select Type...' && f.couponType.dirty }">
+    <option [value]="type" *ngFor="let type of types">{{type}}</option>
+  </select>
+  <span *ngIf="f.couponType.value == 'Select Type...' && f.couponType.dirty">Missing Type</span>
+
+  <label>Required field:</label>
+  <input formControlName="couponTitle" type="text" placeholder="Title...">
+  <span *ngIf="f.couponTitle.errors && f.couponTitle.dirty">Missing Title</span>
+
+  <label>Required field:</label>
+  <input formControlName="couponStartDate" placeholder="Start Date..." [ngClass]="{ 'ng-invalid': f.couponStartDate.errors && f.couponStartDate.touched }"
+  (change)="checkDates()" 
+  type="text" onfocus="(this.type='date')" onblur="(this.type='text')">
+  <span *ngIf="f.couponStartDate.errors && f.couponStartDate.touched">Missing Start Date</span>
+ 
+  <label class="not">Optional field:</label>
+  <input formControlName="couponEndDate" placeholder="End Date..." type="text" onfocus="(this.type='date')" onblur="(this.type='text')" 
+  (change)="checkDates()">
+  <span *ngIf="f.couponEndDate.dirty && validDates == false && f.couponStartDate.dirty">End Date can't be lesser than Start Date!!!</span>
+  <span *ngIf="f.couponStartDate.errors && f.couponEndDate.dirty" >Choose Start Date before choosing End Date</span>
+
+  <label>Required field:</label>
+  <input formControlName="couponAmmount" type="number" min="0" placeholder="Amount...">
+  <span *ngIf="f.couponAmmount.errors && f.couponAmmount.dirty">Missing Amount</span>
+
+  <label>Required field:</label>
+  <input formControlName="couponPrice" type="number" min="0" placeholder="Price...">
+  <span *ngIf="f.couponPrice.errors && f.couponPrice.dirty">Missing Price</span>
+
+  <label class="not">Optional field:</label>
+  <input formControlName="couponImage" type="text" placeholder="Image Link...">
+  
+  <label class="not">Optional field:</label>
+  <input formControlName="couponMessage" type="text" placeholder="Message...">
+
+  <button class='submitButton' [disabled]="myForm.invalid">Create Coupon</button>
+</form>

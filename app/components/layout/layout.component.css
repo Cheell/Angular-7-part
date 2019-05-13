@@ -1,0 +1,41 @@
+section {
+    height: 100%;
+    color: rgb(209, 202, 178);
+    border: 10px solid transparent;
+    border-image: url('../../../assets/Img/border.jpg') 15% stretch;
+    text-align: center;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 13% 80% 7%;
+}
+
+section > * {
+    border: 7px solid transparent;
+    border-style:solid;
+    border-image: url('../../../assets/Img/border.jpg') 25% repeat;
+}
+
+
+.myBack{
+    background-image: url('../../../assets/Img/heroesmightmagic_1339734b.jpg');
+}
+
+
+
+
+#notifier {
+    border: none;
+}
+
+header, footer{
+    grid-column: span 12;
+}
+
+aside{
+    grid-column: span 2;
+}
+
+main{
+    grid-column: span 10;
+}

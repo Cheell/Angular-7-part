@@ -1,0 +1,48 @@
+<p>
+  {{message}}:
+</p>
+
+<section>
+  <div class="menu">Select what coupons to show:
+    <select [(ngModel)]="view" (ngModelChange)="showSubMenu(view)">
+      <option *ngFor="let view of views" [ngValue]="view">{{view}}</option>
+    </select>
+    <div class="options" *ngIf="subMenu === 'companyName'">
+        <input #companyName required type="text" placeholder="Company Name...">
+        <button (click)="getCouponsByCompanyName(companyName.value)" class="menuButton" id="menuButt">show</button>
+    </div>
+    <div *ngIf="subMenu === 'couponTitle'">
+      <input #couponTitle required type="text" placeholder="Coupon Title...">
+      <button (click)="getCouponsByCouponTitle(couponTitle.value)" class="menuButton" id="menuButt">show</button>
+    </div>
+    <div *ngIf="subMenu === 'couponType'">
+      <select [(ngModel)]="type">
+          <option *ngFor="let type of types" [ngValue]="type">{{type}}</option>
+      </select>    
+      <button (click)="getCouponsByCouponType(type)" class="menuButton" id="menuButt">show</button>
+    </div>
+    <div *ngIf="subMenu === 'couponPrice'">
+        <input #from required type="number" min = 0 placeholder="Price from...">
+        <input #to required type="number" min = 0 placeholder="Price to...">
+        <button (click)="getCouponsByCouponPrice(from.value, to.value)" class="menuButton" id="menuButt">show</button>
+    </div>  
+  </div>
+  <div class="main">
+    <div class="sub" *ngFor="let coupon of coupons">
+      <img src="../../../../assets/Img/units/{{coupon.couponImage}}">
+      <span id="id">ID: {{coupon.couponId}}</span>
+      <span id="title">>>{{coupon.couponTitle}}<< by {{coupon.companyName}}</span>
+      <span id="type">Type: <br> {{coupon.couponType}}</span>
+      <span id="start">Start Date:<br> {{coupon.couponStartDate}}</span>
+      <span id="end">End Date:<br> {{coupon.couponEndDate}}</span>
+      <span id="amount">Amount:<br> {{coupon.couponAmmount}}</span>
+      <span id="message">{{coupon.couponMessage}}</span>
+      <span id="price">{{coupon.couponPrice}}$</span>
+
+      <button *ngIf="this.cookie.get('type') == 'company' && this.cookie.get('id') == this.coupon.companyId" 
+        class="submitButton" (click)="editCoupon(coupon.couponId)">Edit</button>
+      
+      <button *ngIf="this.cookie.get('type') == 'customer'" class="submitButton" (click)="buyCoupon(coupon.couponId)">Buy</button>
+    </div>
+  </div>
+</section>
